@@ -5,6 +5,7 @@
 <title>GreenTopia Grocery Store</title>
 
 	<link rel="stylesheet" href="../CSS/P4.css">
+      <link rel="stylesheet" href="P4%20css.css" >
     </head>
     
     
@@ -31,9 +32,7 @@ Montreal, Quebec A1B 2C3
             <p>
                 <b>Payment: </b>
                 
-                <br>VISA **
-**
-** 1234 <br>
+                <br>VISA **** **** **** 1234 <br>
                 <span class="blue">Billing address:</span> Same as shipping address
 
             </p>
@@ -43,81 +42,81 @@ Montreal, Quebec A1B 2C3
             <p>
                 <b>Items:</b> 
             </p>
-			
-			
-		
             <div class="flex-item-left">
-                <p> Your item number 1 is 3 yogurt(s) at the price of $3,55.
-
-                    <script>
-                        let q = 3*3.55;
-                    </script>
-                   
-                    <div class="dropdown">
-                        <button class="dropbtn"># Items</button>
-                        <div class="dropdown-content">
-                            <a href="#">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
-                            <a href="#">6</a>
-                            <a href="#">7</a>
-                            <a href="#">8</a>
-                            <a href="#">9</a>
-                            <a href="#">10</a>
-                        </div>
-                </div>
-				
-                    <button class="button">Delete</button>
-				</p>
-                  
-                <p> Your item number 2 is 1 pack of shrimp(s) at the price of $9,78.
-                     <script>
-                        let w = 1*9.78;
-                    </script>
-                    
-                      <div class="dropdown">
-                        <button class="dropbtn"># Items</button>
-                        <div class="dropdown-content">
-                            <a href="#">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
-                            <a href="#">6</a>
-                            <a href="#">7</a>
-                            <a href="#">8</a>
-                            <a href="#">9</a>
-                            <a href="#">10</a>
-                        </div>
-                </div>
-				
-                    <button class="button">Delete</button>
-			</p>
                 
-                <p> Your item number 3 is 2 cream(s) at the price of $5,35.
-                     <script>
-                        let e = 2*5.35;
-                    </script>
-                    
-                       <div class="dropdown">
-                        <button class="dropbtn"># Items</button>
-                        <div class="dropdown-content">
-                            <a href="#">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
-                            <a href="#">6</a>
-                            <a href="#">7</a>
-                            <a href="#">8</a>
-                            <a href="#">9</a>
-                            <a href="#">10</a>
-                        </div>
-                </div>
+<!--           loop for the items later on?-->
+               
+                <p> Your item number 1 is yogurt(s) at the price of $3,55.
+                    <div class="dropdown">
+                        <select id="Items" >
+                            <option value="1">1 Item</option>
+                            <option value="2">2 Items</option>
+                            <option value="3">3 Items</option>
+                            <option value="4">4 Items</option>
+                            <option value="5">5 Items</option>
+                            <option value="6">6 Items</option>
+                            <option value="7">7 Items</option>
+                            <option value="8">8 Items</option>
+                            <option value="9">9 Items</option>
+                            <option value="10">10 Items</option>
+                        </select>
+				    </div>
+                <script>   
+                    var w = document.getElementById("Items");
+                    var x = w.value;  
+	                let a = Number(x)*3.55; 
+                </script>
+                
+                <button class="button">Delete</button>
+<!--				</p>-->
+                  
+                <p> Your item number 2 is a pack of shrimp(s) at the price of $9,78.
+                     <div class="dropdown">
+                        <select id="Items" >
+                            <option value="1">1 Item</option>
+                            <option value="2">2 Items</option>
+                            <option value="3">3 Items</option>
+                            <option value="4">4 Items</option>
+                            <option value="5">5 Items</option>
+                            <option value="6">6 Items</option>
+                            <option value="7">7 Items</option>
+                            <option value="8">8 Items</option>
+                            <option value="9">9 Items</option>
+                            <option value="10">10 Items</option>
+                        </select>
+				    </div>
+                 <script>   
+                    var w = document.getElementById("Items");
+                    var x = w.value;  
+	                let b = Number(x)*9.78; 
+                </script>
                     <button class="button">Delete</button>
-			</p>
+<!--			</p>-->
+                
+                <p> Your item number 3 is cream(s) at the price of $5,35.
+                    <div class="dropdown">
+                      <select id="Items" >
+                            <option value="1">1 Item</option>
+                            <option value="2">2 Items</option>
+                            <option value="3">3 Items</option>
+                            <option value="4">4 Items</option>
+                            <option value="5">5 Items</option>
+                            <option value="6">6 Items</option>
+                            <option value="7">7 Items</option>
+                            <option value="8">8 Items</option>
+                            <option value="9">9 Items</option>
+                            <option value="10">10 Items</option>
+                        </select>
+                    <script>   
+                        var w = document.getElementById("Items");
+                        var x = w.value;  
+	                   let c = Number(x)*5.35; 
+                    </script>
+                        
+				    </div>
+                
+                    <button class="button">Delete</button>
+<!--			</p>-->
              <button class="continue_shopping">Continue Shopping</button>
             
       
@@ -132,8 +131,9 @@ Montreal, Quebec A1B 2C3
                     Items (3): 
                     <span class="price" id="demo0">
                     <script>
-                        let x = q+w+e;
-                         document.getElementById("demo0").innerHTML="$"+x;
+                        let d = a+b+c;
+                        let e = d.toFixed(2);
+                        document.getElementById("demo0").innerHTML="$"+e;
                     </script>
                     </span>
                     
@@ -144,12 +144,12 @@ Montreal, Quebec A1B 2C3
                     <script>y=4.69;</script>
                 </p>
                 <p>
-                    Total before taxes:
+                    <ins>Total before taxes:</ins>
                     <span class="price" id="demo1">
                     <script>
-                        let z = x+y;
-                        let a = z.toFixed(2);
-                        document.getElementById("demo1").innerHTML="$"+a;
+                        var f = Number(y)+Number(e);
+                        var g = f.toFixed(2);
+                        document.getElementById("demo1").innerHTML="$"+Number(g);
                     </script>
                     </span>
                     <hr>
@@ -157,20 +157,21 @@ Montreal, Quebec A1B 2C3
                     QST
                     <span class="price" id="demo2">
                     <script>
-                        let k = z*0.09975; 
-                        let b = k.toFixed(2);
-                        document.getElementById("demo2").innerHTML="$"+b;
+                        var h = Number(g)*0.09975; 
+                        var i = h.toFixed(2);
+                        document.getElementById("demo2").innerHTML="$"+i;
                     </script>
                     </span>
+                
                 </p>
                 
                 <p>
                     GST
                     <span class="price" id="demo3">
                     <script>
-                        let l = z*0.05; 
-                        let c = l.toFixed(2);
-                        document.getElementById("demo3").innerHTML="$"+c;
+                        var j = g*0.05; 
+                        var k = j.toFixed(2);
+                        document.getElementById("demo3").innerHTML="$"+k;
                         </script>
                     </span>
                 </p>
@@ -180,17 +181,18 @@ Montreal, Quebec A1B 2C3
                     <h2>Total Price
                     <span class="price" id="demo4">
                     <script>
-                        let m = z+k+l; 
-                        let d = m.toFixed(2);
-                        document.getElementById("demo4").innerHTML="$"+d;
+                        var l = Number(g)+Number(i)+Number(k); 
+                        var m = l.toFixed(2);
+                        document.getElementById("demo4").innerHTML="$"+m;
                     </script>
                         </span>
                     </h2>
                  <button class="place_order">Place Order</button>
-            </p>
+<!--            </p>-->
    
-	</p>
+<!--	</p>-->
     </div>
 </div>
 </body>
 </html>
+
